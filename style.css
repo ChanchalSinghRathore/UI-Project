@@ -321,7 +321,7 @@ html{
 
 .carousel-image {
     width: 100%;
-    height: 50vh; /* Half the screen height */
+    height: 50vh; 
     background-size: cover;
     background-position: center;
 }
@@ -330,7 +330,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* Half the screen height */
+    height: 50vh; 
     text-align: center;
     background-color: #ffffff;
     padding: 20px;
@@ -369,27 +369,44 @@ html{
 }
 
 
-.carousel-nav {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 14px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    pointer-events: none;
+.cnt1{
+    background: linear-gradient(purple,pink);
+    color: white;
+    width: 100vw;
+}
+.cnt2{
+    background:rgb(66, 102, 222);
+    color: rgb(255, 255, 255);
+    width: 100vw;
+}
+.cnt3{
+    background: #47474b;
+    color: white;
+    width: 100vw;
+}
+.cnt4{
+    background:rgb(22, 22, 22);
+    color: rgb(255, 255, 255);
+    width: 100vw;
+}
+.cnt5{
+    background: #549bff;
+    color: white;
+    width: 100vw;
+}
+.cnt6{
+    background: #07663e;
+    color: white;
+    width: 100vw;
+}
+.cnt7{
+    background: #24e9ff;
+    color: white;
+    width: 100vw;
 }
 
-.nav-left, .nav-right {
-    font-size: 30px;
-    color: #333;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    cursor: pointer;
-    pointer-events: auto;
-    user-select: none;
-}
-  @media only screen and (max-width: 440px) {
+
+  @media only screen and (max-width: 600px) {
     .section{
         display: none;
     }

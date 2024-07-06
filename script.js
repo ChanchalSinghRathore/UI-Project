@@ -94,23 +94,8 @@ animateOnScrollElements.forEach(element => {
 
 const indicators = document.querySelectorAll('.indicator');
 const carouselInner = document.querySelector('.carousel-inner');
-const navLeft = document.querySelector('.nav-left');
-const navRight = document.querySelector('.nav-right');
 let currentSlide = 0;
-
-indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-        changeSlide(index);
-    });
-});
-
-navLeft.addEventListener('click', () => {
-    changeSlide(currentSlide - 1);
-});
-
-navRight.addEventListener('click', () => {
-    changeSlide(currentSlide + 1);
-});
+const slideInterval = 3000; // Change slide every 3 seconds
 
 function changeSlide(index) {
     if (index < 0) {
@@ -123,3 +108,15 @@ function changeSlide(index) {
     indicators[currentSlide].classList.add('active');
     carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
+
+function autoSlide() {
+    changeSlide(currentSlide + 1);
+}
+
+setInterval(autoSlide, slideInterval);
+
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        changeSlide(index);
+    });
+});
